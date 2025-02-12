@@ -1,0 +1,945 @@
+{
+  "13889618610019241313": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "1624602421745893304": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "8313154664628441895": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "128779203776956949": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "14115583663608823915": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "17627116980600991799": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "811370845755982297": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "npx jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "14645727089538714912": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "npx jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "15376833241416448670": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "npx jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "1222846121719430619": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "10646165173136920386": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "4503806523012567232": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "npx jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "16789101934710408556": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "npx jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "11330849315501516288": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "npx jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "17471416745582952493": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "6301583368440574278": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "npx jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "4393872335596233031": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "12984509860511954172": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "10608455821580188889": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "9438860781047940031": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "1197366073610089503": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "18058616304903974151": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "npx jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  },
+  "15930771158456156364": {
+    "targets": {
+      "jest:test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^production",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  }
+}

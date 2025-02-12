@@ -1,0 +1,87 @@
+
+.nx/installation
+.nx/cache
+.nx/workspace-data
+
+# Node modules (dependencies)
+**/node_modules/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+**/.pnp/
+**/.pnp.js
+
+# Build directories (Android & iOS)
+**/.cxx/
+**/android/.gradle/
+**/android/app/build/
+**/android/build/
+**/ios/Pods/
+**/ios/build/
+**/ios/.symlinks/
+**/ios/DerivedData/
+**/ios/*.xcodeproj/project.xcworkspace/
+**/ios/*.xcworkspace/
+
+# Metro bundler cache
+**/metro-cache/
+**/react-native-packager-cache/
+
+# Xcode specific
+**/xcuserdata/
+**/*.pbxproj
+**/*.mode1v3
+**/*.mode2v3
+**/*.perspectivev3
+**/*.xcuserstate
+
+# Watchman files
+**/.watchmanconfig
+**/.watchman.out
+
+# Debug and logs
+**/*.log
+**/*.log.*
+**/*.swp
+**/*.swo
+**/*.swn
+**/*.bak
+**/*.tmp
+
+# Package managers
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Expo-specific (if some projects use Expo)
+**/.expo/
+**/.expo-shared/
+
+# Fastlane (if used for builds)
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots/
+
+# JetBrains/IDE files
+**/.idea/
+**/*.iml
+**/.vscode/
+**/.vscode/*
+
+# Miscellaneous
+**/.env
+**/.env.*
+**/.git/
+**/*.keystore

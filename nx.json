@@ -1,0 +1,11 @@
+{
+  "installation": {
+    "version": "20.4.0",
+    "plugins": {
+      "@nx/eslint": "20.4.0",
+      "@nx/rspack": "20.4.0",
+      "@nx/react-native": "20.4.0"
+    }
+  },
+  "nxCloudId": "679a900df31195248e9efdf6"
+}

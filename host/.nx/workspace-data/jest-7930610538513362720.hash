@@ -1,0 +1,43 @@
+{
+  "13721396921180872205": {
+    "targets": {
+      "test": {
+        "command": "jest",
+        "options": {
+          "cwd": ".",
+          "env": {
+            "TS_NODE_COMPILER_OPTIONS": "{\"moduleResolution\":\"node10\"}"
+          }
+        },
+        "metadata": {
+          "technologies": [
+            "jest"
+          ],
+          "description": "Run Jest Tests",
+          "help": {
+            "command": "yarn jest --help",
+            "example": {
+              "options": {
+                "coverage": true
+              }
+            }
+          }
+        },
+        "cache": true,
+        "inputs": [
+          "default",
+          "^default",
+          {
+            "externalDependencies": [
+              "jest",
+              "react-native"
+            ]
+          }
+        ],
+        "outputs": [
+          "{projectRoot}/coverage"
+        ]
+      }
+    }
+  }
+}

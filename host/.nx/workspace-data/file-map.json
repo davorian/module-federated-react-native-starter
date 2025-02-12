@@ -1,0 +1,326 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.4.0",
+  "pathMappings": {
+    "*": [
+      "./@mf-types/*"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/jest/plugin",
+      "options": {
+        "targetName": "jest:test"
+      }
+    }
+  ],
+  "fileMap": {
+    "projectFileMap": {
+      "host": [
+        {
+          "file": ".bundle/config",
+          "hash": "9116505824108018199"
+        },
+        {
+          "file": ".eslintrc.js",
+          "hash": "6553717738514300813"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "2922504990543699461"
+        },
+        {
+          "file": ".prettierrc",
+          "hash": "12603150478694552525"
+        },
+        {
+          "file": ".watchmanconfig",
+          "hash": "15753941481085060538"
+        },
+        {
+          "file": "App.tsx",
+          "hash": "12972543893833981610"
+        },
+        {
+          "file": "Gemfile",
+          "hash": "2090536375223830271"
+        },
+        {
+          "file": "Gemfile.lock",
+          "hash": "141909200698931056"
+        },
+        {
+          "file": "__tests__/App.test.tsx",
+          "hash": "2535733238446136805"
+        },
+        {
+          "file": "android/app/app-release.keystore",
+          "hash": "5590559830604603877"
+        },
+        {
+          "file": "android/app/build.gradle",
+          "hash": "9197934098628288552"
+        },
+        {
+          "file": "android/app/debug.keystore",
+          "hash": "5037686243849261810"
+        },
+        {
+          "file": "android/app/proguard-rules.pro",
+          "hash": "13814197385154279786"
+        },
+        {
+          "file": "android/app/src/debug/AndroidManifest.xml",
+          "hash": "9217300540490017338"
+        },
+        {
+          "file": "android/app/src/main/AndroidManifest.xml",
+          "hash": "5661196191860399942"
+        },
+        {
+          "file": "android/app/src/main/java/com/host/app/MainActivity.kt",
+          "hash": "9641608868861045148"
+        },
+        {
+          "file": "android/app/src/main/java/com/host/app/MainApplication.kt",
+          "hash": "9619718697941870072"
+        },
+        {
+          "file": "android/app/src/main/res/drawable/rn_edit_text_material.xml",
+          "hash": "4466596183044014152"
+        },
+        {
+          "file": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+          "hash": "10788509195642110029"
+        },
+        {
+          "file": "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+          "hash": "14348562046770238248"
+        },
+        {
+          "file": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+          "hash": "328692529308011025"
+        },
+        {
+          "file": "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+          "hash": "11802043336826859502"
+        },
+        {
+          "file": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+          "hash": "13006206334539413900"
+        },
+        {
+          "file": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+          "hash": "1812825738055967771"
+        },
+        {
+          "file": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+          "hash": "6104457872863500683"
+        },
+        {
+          "file": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+          "hash": "2478168592410677995"
+        },
+        {
+          "file": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+          "hash": "12283149652938275290"
+        },
+        {
+          "file": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+          "hash": "7126668675123994836"
+        },
+        {
+          "file": "android/app/src/main/res/values/strings.xml",
+          "hash": "1534506346884224690"
+        },
+        {
+          "file": "android/app/src/main/res/values/styles.xml",
+          "hash": "14052910750539201041"
+        },
+        {
+          "file": "android/build.gradle",
+          "hash": "107524191545757806"
+        },
+        {
+          "file": "android/gradle.properties",
+          "hash": "10811338976053853759"
+        },
+        {
+          "file": "android/gradle/wrapper/gradle-wrapper.jar",
+          "hash": "5909086893679643373"
+        },
+        {
+          "file": "android/gradle/wrapper/gradle-wrapper.properties",
+          "hash": "14314964109440154932"
+        },
+        {
+          "file": "android/gradlew",
+          "hash": "8388103086298757654"
+        },
+        {
+          "file": "android/gradlew.bat",
+          "hash": "3049992198610835351"
+        },
+        {
+          "file": "android/settings.gradle",
+          "hash": "10360687571184027040"
+        },
+        {
+          "file": "app.json",
+          "hash": "15858970627097951127"
+        },
+        {
+          "file": "babel.config.js",
+          "hash": "16417713595191632598"
+        },
+        {
+          "file": "index.js",
+          "hash": "9155405112786234755"
+        },
+        {
+          "file": "ios/.xcode.env",
+          "hash": "2240437479405059044"
+        },
+        {
+          "file": "ios/Host.xcodeproj/project.pbxproj",
+          "hash": "4341304708870493516"
+        },
+        {
+          "file": "ios/Host.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+          "hash": "12722229457274558422"
+        },
+        {
+          "file": "ios/Host.xcodeproj/xcshareddata/xcschemes/Host.xcscheme",
+          "hash": "2273021397175799016"
+        },
+        {
+          "file": "ios/Host.xcworkspace/contents.xcworkspacedata",
+          "hash": "3077232553237848892"
+        },
+        {
+          "file": "ios/Host/AppDelegate.h",
+          "hash": "4105548683868581501"
+        },
+        {
+          "file": "ios/Host/AppDelegate.mm",
+          "hash": "15966387805193830474"
+        },
+        {
+          "file": "ios/Host/Images.xcassets/AppIcon.appiconset/Contents.json",
+          "hash": "13651775502586994303"
+        },
+        {
+          "file": "ios/Host/Images.xcassets/Contents.json",
+          "hash": "10114040536141029740"
+        },
+        {
+          "file": "ios/Host/Info.plist",
+          "hash": "5511868311211868527"
+        },
+        {
+          "file": "ios/Host/LaunchScreen.storyboard",
+          "hash": "11968976703765805668"
+        },
+        {
+          "file": "ios/Host/PrivacyInfo.xcprivacy",
+          "hash": "11278250963111023429"
+        },
+        {
+          "file": "ios/Host/main.m",
+          "hash": "3932908704591016568"
+        },
+        {
+          "file": "ios/HostTests/HostTests.m",
+          "hash": "13069524959641355134"
+        },
+        {
+          "file": "ios/HostTests/Info.plist",
+          "hash": "490535150174461673"
+        },
+        {
+          "file": "ios/Podfile",
+          "hash": "16634399762828462679"
+        },
+        {
+          "file": "ios/Podfile.lock",
+          "hash": "15899893542747448963"
+        },
+        {
+          "file": "jest.config.js",
+          "hash": "3450453734004767423"
+        },
+        {
+          "file": "nx.json",
+          "hash": "5102562618111049312"
+        },
+        {
+          "file": "package.json",
+          "hash": "7569317454092489113",
+          "deps": [
+            "npm:@babel/core",
+            "npm:@babel/plugin-syntax-typescript",
+            "npm:@babel/preset-env",
+            "npm:@babel/runtime",
+            "npm:@callstack/repack",
+            "npm:@react-native-community/cli",
+            "npm:@react-native-community/cli-platform-android",
+            "npm:@react-native-community/cli-platform-ios",
+            "npm:@react-native/babel-preset",
+            "npm:@react-native/eslint-config",
+            "npm:@react-native/metro-config",
+            "npm:@react-native/typescript-config",
+            "npm:@rspack/core",
+            "npm:@swc/helpers",
+            "npm:@types/react",
+            "npm:@types/react-native",
+            "npm:@types/react-test-renderer",
+            "npm:babel-jest",
+            "npm:eslint",
+            "npm:jest",
+            "npm:prettier",
+            "npm:react-test-renderer",
+            "npm:typescript",
+            "npm:nx",
+            "npm:@nx/eslint",
+            "npm:@nx/rspack",
+            "npm:@nx/jest",
+            "npm:@nx/react-native",
+            "npm:@nx/gradle",
+            "npm:@module-federation/enhanced",
+            "npm:react",
+            "npm:react-native"
+          ]
+        },
+        {
+          "file": "patches/isomorphic-rslog+0.0.7.patch",
+          "hash": "5331802303176126981"
+        },
+        {
+          "file": "react-native.config.js",
+          "hash": "2917456592141492893"
+        },
+        {
+          "file": "recreate-project-structure.sh",
+          "hash": "17777338509891284642"
+        },
+        {
+          "file": "recreate-structure-with-content.sh",
+          "hash": "1846759135207248225"
+        },
+        {
+          "file": "rspack.config.mjs",
+          "hash": "4765440771838976262"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "17547800653475923023"
+        },
+        {
+          "file": "yarn.lock",
+          "hash": "16006846549826938936"
+        }
+      ]
+    },
+    "nonProjectFiles": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "lint": {
+      "cache": true
+    },
+    "test": {
+      "cache": true
+    }
+  },
+  "defaultBase": "main",
+  "plugins": [
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "jest:test"
+      }
+    },
+    {
+      "plugin": "@nx/react-native/plugin",
+      "options": {
+        "startTargetName": "start",
+        "upgradeTargetName": "update",
+        "bundleTargetName": "bundle",
+        "podInstallTargetName": "pod-install",
+        "runIosTargetName": "run-ios",
+        "runAndroidTargetName": "run-android",
+        "buildIosTargetName": "build-ios",
+        "buildAndroidTargetName": "build-android",
+        "syncDepsTargetName": "sync-deps"
+      }
+    },
+    {
+      "plugin": "@nx/gradle",
+      "options": {
+        "testTargetName": "test",
+        "classesTargetName": "classes",
+        "buildTargetName": "build",
+        "includeSubprojectsTasks": false
+      }
+    }
+  ],
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*"],
+    "production": ["default", "!{projectRoot}/src/test/**/*"]
+  }
+}
