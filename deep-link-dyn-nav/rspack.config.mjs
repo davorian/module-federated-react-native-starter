@@ -25,30 +25,12 @@ export default (env) => {
 
   return {
     mode,
-    devtool: 'source-map',
+    devtool: false,
     context,
     entry: {},
     resolve: {
       ...Repack.getResolveOptions(platform),
-      alias: {
-        // Force ESM version of @react-navigation/native-stack to avoid commonjs conflicts
-        '@react-navigation/native-stack': path.resolve(
-          'node_modules/@react-navigation/native-stack/lib/module/index.js'
-        ),
-        // Force ESM version of @react-navigation/native-stack to avoid commonjs conflicts
-        '@react-navigation/native': path.resolve(
-          'node_modules/@react-navigation/native/lib/module/index.js'
-        ),
-      },
     },
-    externalsType: 'module', // Use ESM instead of commonjs
-    externals: [
-      {
-        // Prevent React Native internals like AppContainer from being bundled
-        'react-native/Libraries/ReactNative/AppContainer':
-          'react-native/Libraries/ReactNative/AppContainer',
-      },
-    ],
     output: {
       clean: true,
       hashFunction: 'xxhash64',
@@ -69,8 +51,8 @@ export default (env) => {
         Repack.FLOW_TYPED_MODULES_LOADING_RULES,
         {
           test: /\.[jt]sx?$/,
-          type: 'javascript/auto',
-          exclude: [/node_modules/],
+          type: 'javascript/auto', // DONT CHANGE THIS TO ESM
+          exclude: /node_modules\/(?!@react-native-masked-view)/, // Exclude all but this package
           use: {
             loader: 'builtin:swc-loader',
             options: {
@@ -138,23 +120,33 @@ export default (env) => {
           },
           '@react-navigation/native': {
             singleton: true,
-            eager: true,
-            requiredVersion: '^6.1.18',
+            eager: false,
+            requiredVersion: '^7.0.14',
           },
           '@react-navigation/native-stack': {
             singleton: true,
-            eager: true,
-            requiredVersion: '^6.10.1',
+            eager: false,
+            requiredVersion: '^7.2.0',
           },
           'react-native-safe-area-context': {
             singleton: true,
-            eager: true,
-            requiredVersion: '^4.14.0',
+            eager: false,
+            requiredVersion: '^5.2.0',
+          },
+          '@react-native-masked-view/masked-view': {
+            singleton: true,
+            eager: false,
+            requiredVersion: '^0.3.2',
           },
           'react-native-screens': {
             singleton: true,
-            eager: true,
-            requiredVersion: '^3.35.0',
+            eager: false,
+            requiredVersion: '^4.7.0-beta.4',
+          },
+          '@react-navigation/elements': {
+            singleton: true,
+            eager: false,
+            requiredVersion: '^2.2.5',
           },
         },
       }),

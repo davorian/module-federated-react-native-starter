@@ -120,10 +120,6 @@ export default (env) => {
           },
         },
       }),
-      // silence missing @react-native-masked-view optionally required by @react-navigation/elements
-      new rspack.IgnorePlugin({
-        resourceRegExp: /^@react-native-masked-view/,
-      }),
     ],
   }
 }

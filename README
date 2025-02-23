@@ -9,7 +9,7 @@ remotes fine. But when I add react-navigation
 those screen displays without navig displayed
 but with code within the stacks component actually running (HS2!!)
 
-Even whe downgrading to older models I get
+Even when downgrading to older models I get
 a different issue of a red screen with
 a tags suggesting that theres a version mismatch.
 

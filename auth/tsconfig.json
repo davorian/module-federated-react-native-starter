@@ -2,8 +2,5 @@
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
     "module": "ES2020",
-    "paths": {
-      "*": ["./@mf-types/*"]
-    }
   }
 }
