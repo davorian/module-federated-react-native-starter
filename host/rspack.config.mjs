@@ -143,7 +143,7 @@ export default (env) => {
           '@react-navigation/native': {
             singleton: true,
             eager: true,
-            requiredVersion: '^6.1.18',
+            requiredVersion: '^7.0.14',
           },
           '@react-navigation/native-stack': {
             singleton: true,
@@ -160,7 +160,21 @@ export default (env) => {
             eager: true,
             requiredVersion: '^4.7.0-beta.4',
           },
+          '@react-native-masked-view/masked-view': {
+            singleton: true,
+            eager: true,
+            requiredVersion: '^0.3.2',
+          },
+          '@react-navigation/elements': {
+            singleton: true,
+            eager: true,
+            requiredVersion: '^2.2.5',
+          },
         },
+      }),
+      // silence missing @react-native-masked-view optionally required by @react-navigation/elements
+      new rspack.IgnorePlugin({
+        resourceRegExp: /^@react-native-masked-view/,
       }),
     ],
   }
