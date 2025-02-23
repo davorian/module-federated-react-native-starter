@@ -1,9 +1,24 @@
 // @ts-check
+// import {createRequire} from 'node:module';
 import path from 'node:path'
 import * as Repack from '@callstack/repack'
 import rspack from '@rspack/core'
 
+// import pkg from './package.json' with {type: "json"}
+const EXCEPT = ['@module-federation/enhanced']
+
+/*const getSharedDependencies = ({eager = true}) => {
+  const shared = Object.entries(pkg.dependencies)
+    .filter(([dep]) => !EXCEPT.includes(dep))
+    .map(([dep, version]) => {
+      return [dep, {singleton: true, eager, requiredVersion: version}];
+    });
+  return Object.fromEntries(shared);
+};*/
+
+// @ts-ignore
 const dirname = Repack.getDirname(import.meta.url)
+//const {resolve} = createRequire(import.meta.url)
 
 /** @type {(env: import('@callstack/repack').EnvOptions) => import('@rspack/core').Configuration} */
 export default (env) => {
@@ -27,30 +42,13 @@ export default (env) => {
 
   return {
     mode,
-    devtool: 'source-map',
+    devtool: false,
     context,
     entry,
     resolve: {
       ...Repack.getResolveOptions(platform),
-      alias: {
-        // Force ESM version of @react-navigation/native-stack to avoid commonjs conflicts
-        '@react-navigation/native-stack': path.resolve(
-          'node_modules/@react-navigation/native-stack/lib/module/index.js'
-        ),
-        // Force ESM version of @react-navigation/native-stack to avoid commonjs conflicts
-        '@react-navigation/native': path.resolve(
-          'node_modules/@react-navigation/native/lib/module/index.js'
-        ),
-      },
     },
     externalsType: 'module', // Use ESM instead of commonjs
-    externals: [
-      {
-        // Prevent React Native internals like AppContainer from being bundled
-        'react-native/Libraries/ReactNative/AppContainer':
-          'react-native/Libraries/ReactNative/AppContainer',
-      },
-    ],
     output: {
       clean: true,
       hashFunction: 'xxhash64',
@@ -72,7 +70,7 @@ export default (env) => {
         {
           test: /\.[jt]sx?$/,
           type: 'javascript/auto',
-          exclude: [/node_modules/],
+          exclude: /node_modules\/(?!@react-native-masked-view)/, // Exclude all but this package
           use: {
             loader: 'builtin:swc-loader',
             options: {
@@ -122,6 +120,9 @@ export default (env) => {
       new Repack.plugins.ModuleFederationPluginV2({
         name: 'host',
         filename: 'host.container.js.bundle',
+        exposes: {
+          '.': './App',
+        },
         remotes: {
           mfeFood: `mfeFood@http://localhost:8082/${platform}/mf-manifest.json`,
           auth: `auth@http://localhost:8083/${platform}/mf-manifest.json`,
@@ -147,23 +148,19 @@ export default (env) => {
           '@react-navigation/native-stack': {
             singleton: true,
             eager: true,
-            requiredVersion: '^6.10.1',
+            requiredVersion: '^7.2.0',
           },
           'react-native-safe-area-context': {
             singleton: true,
             eager: true,
-            requiredVersion: '^4.14.0',
+            requiredVersion: '^5.2.0',
           },
           'react-native-screens': {
             singleton: true,
             eager: true,
-            requiredVersion: '^3.35.0',
+            requiredVersion: '^4.7.0-beta.4',
           },
         },
-      }),
-      // silence missing @react-native-masked-view optionally required by @react-navigation/elements
-      new rspack.IgnorePlugin({
-        resourceRegExp: /^@react-native-masked-view/,
       }),
     ],
   }

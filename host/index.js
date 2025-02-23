@@ -1,7 +1,7 @@
 import { AppRegistry } from 'react-native'
-import App from './App'
-import { name as appName } from './app.json'
-import { NavigationContainer } from '@react-navigation/native'
-import * as React from 'react'
+import App from './App';
+import appConfig from './app.json'; // Import the entire JSON object
 
-AppRegistry.registerComponent(appName, () => App)
+AppRegistry.registerComponent(appConfig.name, function() { // Access the 'name' property
+  return App;
+});
