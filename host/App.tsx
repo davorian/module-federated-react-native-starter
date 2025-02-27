@@ -1,31 +1,11 @@
 import * as React from 'react'
 
 import { Text, View } from 'react-native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { NavigationContainer } from '@react-navigation/native'
-
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { useEffect } from 'react'
-
-
-/*
-function MyTabs() {
-  const Tab = createBottomTabNavigator();
-  return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        </Tab.Navigator>
-    </NavigationContainer>
-  );
-}
-*/
-
 
 // @ts-ignore
 const FoodApp = React.lazy(() => import('mfeFood'));
 // @ts-ignore
-const AuthApp = React.lazy(() => import('auth'));
+const AuthApp = React.lazy(() => import('auth/App'));
 // @ts-ignore
 const LinkNav = React.lazy(() => import('deepLinkDynNav'));
 

@@ -42,7 +42,7 @@ export default (env) => {
 
   return {
     mode,
-    devtool: false,
+    devtool: mode === 'development' ? 'inline-source-map' : false, // Enable source maps in development
     context,
     entry,
     resolve: {
