@@ -1,5 +1,7 @@
 // @ts-check
-// import {createRequire} from 'node:module';
+import {createRequire} from 'node:module'
+import {composePlugins} from '@nx/rspack'
+import {withZephyr} from 'zephyr-repack-plugin'
 import path from 'node:path'
 import * as Repack from '@callstack/repack'
 import rspack from '@rspack/core'

@@ -1,6 +1,7 @@
 import path from 'node:path'
 import * as Repack from '@callstack/repack'
 import rspack from '@rspack/core'
+import {withZephyr} from 'zephyr-repack-plugin'
 
 const dirname = Repack.getDirname(import.meta.url)
 
@@ -23,7 +24,7 @@ export default (env) => {
 
   process.env.BABEL_ENV = mode;
 
-  return {
+  const config = {
     mode,
     devtool: mode === 'development' ? 'inline-source-map' : false, // Enable source maps in development
     context,
@@ -156,4 +157,5 @@ export default (env) => {
       }),
     ],
   };
+  return withZephyr()(config);
 };
