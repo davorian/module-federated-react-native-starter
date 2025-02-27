@@ -1,26 +1,23 @@
 // In App.js in a new project
 
 import * as React from 'react'
-import { View, Text } from 'react-native'
+import { Text, View } from 'react-native'
 
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { ReactNode } from 'react'
+ import { NavigationContainer } from '@react-navigation/native'
+// import { createNativeStackNavigator } from '@react-navigation/native-stack'
+ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 const Tab = createBottomTabNavigator();
+// const Stack = createNativeStackNavigator()
 
 const Profile =  () => (<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    <Text>-Profile !-Deep Link Dyn Nav-!-</Text>
+    <Text> - Profile 👤- Deep Link Dyn Nav - </Text>
   </View>)
 
 
 const Layout =  (Child:()=>React.JSX.Element) => () => (<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
   <Child/>
 </View>)
-
-
-
 
 
 function RootTabs({mfeFood, auth}:{mfeFood:()=>React.JSX.Element, auth: ()=>React.JSX.Element}) {
@@ -38,12 +35,13 @@ function RootTabs({mfeFood, auth}:{mfeFood:()=>React.JSX.Element, auth: ()=>Reac
 function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>-HomeScreen !-Deep Link Dyn Nav-!-</Text>
+      <Text>- HomeScreen 🏠 - Deep Link Dyn Nav App -</Text>
+
     </View>
   )
 }
 
-const DeepLinkDynNavFallback = () => {
+/*const DeepLinkDynNavFallback = () => {
   return <View
     style={{
       flex: 1,
@@ -55,13 +53,12 @@ const DeepLinkDynNavFallback = () => {
   >
     <Text>Loading deep linking and dynamic navigation...</Text>
   </View>
-}
-
-const Stack = createNativeStackNavigator()
+}*/
 
 
 
-function RootStack() {
+
+/*function RootStack() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -69,10 +66,10 @@ function RootStack() {
       </Stack.Navigator>
     </NavigationContainer>)
 
-}
+}*/
 // replacing HomeScreen with RootStack crashes app - why?
-const App = ({mfeFood, auth}:{mfeFood:()=>React.JSX.Element, auth: ()=>React.JSX.Element}) => <React.Suspense fallback={<DeepLinkDynNavFallback />}>
-  <RootTabs mfeFood={mfeFood} auth={auth}/>
-</React.Suspense>
+const App = ({mfeFood, auth}:{mfeFood:()=>React.JSX.Element, auth: ()=>React.JSX.Element})  => <RootTabs mfeFood={mfeFood} auth={auth}/>
+// const App = () => <HomeScreen/>
+
 
 export default App

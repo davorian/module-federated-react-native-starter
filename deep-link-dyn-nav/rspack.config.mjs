@@ -21,11 +21,11 @@ export default (env) => {
     throw new Error('Missing platform')
   }
 
-  process.env.BABEL_ENV = mode
+  process.env.BABEL_ENV = mode;
 
   return {
     mode,
-    devtool: false,
+    devtool: mode === 'development' ? 'inline-source-map' : false, // Enable source maps in development
     context,
     entry: {},
     resolve: {
@@ -51,8 +51,8 @@ export default (env) => {
         Repack.FLOW_TYPED_MODULES_LOADING_RULES,
         {
           test: /\.[jt]sx?$/,
-          type: 'javascript/auto', // DONT CHANGE THIS TO ESM
-          exclude: /node_modules\/(?!@react-native-masked-view)/, // Exclude all but this package
+          type: 'javascript/auto',
+          exclude: [/node_modules/],
           use: {
             loader: 'builtin:swc-loader',
             options: {
@@ -155,5 +155,5 @@ export default (env) => {
         resourceRegExp: /^@react-native-masked-view/,
       }),
     ],
-  }
-}
+  };
+};

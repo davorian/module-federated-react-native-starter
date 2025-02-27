@@ -103,7 +103,7 @@ export default (env) => {
         name: 'auth',
         filename: 'auth.container.js.bundle',
         exposes: {
-          '.': './src/app/App',
+          './App': './src/app/App',
         },
         dts: false,
         getPublicPath: `return "http://localhost:8083/${platform}/"`,
