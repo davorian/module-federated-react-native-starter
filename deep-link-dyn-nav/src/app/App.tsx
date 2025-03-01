@@ -15,7 +15,7 @@ const Profile =  () => (<View style={{ flex: 1, alignItems: 'center', justifyCon
   </View>)
 
 
-const Layout =  (Child:()=>React.JSX.Element) => () => (<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+const Layout = (backgroundColor:string) => (Child:()=>React.JSX.Element) => () => (<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor  }}>
   <Child/>
 </View>)
 
@@ -25,8 +25,8 @@ function RootTabs({mfeFood, auth}:{mfeFood:()=>React.JSX.Element, auth: ()=>Reac
     <NavigationContainer>
     <Tab.Navigator>
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Auth" component={Layout(auth)} />
-      <Tab.Screen name="Food" component={Layout(mfeFood)} />
+      <Tab.Screen name="Auth" component={Layout('blue')(auth)} />
+      <Tab.Screen name="Food" component={Layout('purple')(mfeFood)} />
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
     </NavigationContainer>
@@ -34,9 +34,8 @@ function RootTabs({mfeFood, auth}:{mfeFood:()=>React.JSX.Element, auth: ()=>Reac
 }
 function HomeScreen() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>- HomeScreen 🏠 - Deep Link Dyn Nav App -</Text>
-
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'orange' }}>
+      <Text>🏠 HomeScreen - Deep Link Dyn Nav App 🏠</Text>
     </View>
   )
 }

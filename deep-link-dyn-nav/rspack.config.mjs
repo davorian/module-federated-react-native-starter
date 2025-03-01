@@ -2,6 +2,8 @@ import path from 'node:path'
 import * as Repack from '@callstack/repack'
 import rspack from '@rspack/core'
 import {withZephyr} from 'zephyr-repack-plugin'
+const STANDALONE = Boolean(process.env.STANDALONE);
+const USE_ZEPHYR = Boolean(process.env.ZC);
 
 const dirname = Repack.getDirname(import.meta.url)
 
@@ -38,7 +40,9 @@ export default (env) => {
       path: path.join(dirname, 'build', 'deepLinkDynNav', platform),
       filename: 'index.bundle',
       chunkFilename: '[name].chunk.bundle',
-      publicPath: Repack.getPublicPath({ platform, devServer }),
+      // publicPath must be configured if using manifest
+      // publicPath: Repack.getPublicPath({ platform, devServer }),
+      // You need to set a unique value that is not equal to other applications
       uniqueName: 'deepLinkDynNav',
     },
     optimization: {
@@ -107,6 +111,7 @@ export default (env) => {
           '.': './src/app/App',
         },
         dts: false,
+        // publicPath must be configured if using manifest
         getPublicPath: `return "http://localhost:8084/${platform}/"`,
         shared: {
           react: {
