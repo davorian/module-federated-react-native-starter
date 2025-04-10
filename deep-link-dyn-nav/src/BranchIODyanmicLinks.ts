@@ -1,3 +1,6 @@
+import { LinkingDataDescriptor } from './useDeepLinkingProvider'
+import { DeepLinkGenerator } from './useDeepLinkingProvider'
+
 export const branchDeepLinkGenerator: DeepLinkGenerator = async (screen, params) => {
   const response = await fetch("https://api.branch.io/v1/url", {
     method: "POST",
@@ -14,7 +17,7 @@ export const branchDeepLinkGenerator: DeepLinkGenerator = async (screen, params)
 export const branchDataDescriptor: LinkingDataDescriptor = {
   initialize: (callback) => {
     const branch = require("react-native-branch");
-    branch.initSession().then(({ params }) => {
+    branch.initSession().then(({ params }:{params:Record<string, string> | undefined}) => {
       if (params?.$canonical_url) {
         callback(params.$canonical_url);
       }

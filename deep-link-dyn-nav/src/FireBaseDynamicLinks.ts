@@ -1,4 +1,5 @@
 import dynamicLinks from "@react-native-firebase/dynamic-links";
+import { DeepLinkGenerator, LinkingDataDescriptor } from './useDeepLinkingProvider'
 
 const firebaseDeepLinkGenerator: DeepLinkGenerator = async (screen, params) => {
   try {
@@ -16,5 +17,5 @@ const firebaseDeepLinkGenerator: DeepLinkGenerator = async (screen, params) => {
 };
 
 const firebaseDataDescriptor: LinkingDataDescriptor = {
-  initialize: (callback) => dynamicLinks().onLink((link) => callback(link.url)),
+  initialize: (callback) => dynamicLinks().onLink(( link) => callback(link.url)),
 };

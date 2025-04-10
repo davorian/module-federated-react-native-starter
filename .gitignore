@@ -30,7 +30,6 @@
 
 # Xcode specific
 **/xcuserdata/
-**/*.pbxproj
 **/*.mode1v3
 **/*.mode2v3
 **/*.perspectivev3
