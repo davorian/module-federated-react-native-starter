@@ -1,0 +1,18 @@
+// @ts-check
+const { withModuleFederation } = require('@nx/react/module-federation');
+
+const config = {
+  name: '${APP_NAME}',
+  ${SHARED_TYPE}: {
+    '.': './${APP_ENTRY}',
+  },
+  shared: {
+    react: { singleton: true, eager: true, requiredVersion: false },
+    'react-dom': { singleton: true, eager: true, requiredVersion: false },
+    'react-native': { singleton: true, eager: true, requiredVersion: false },
+    '@react-navigation/native': { singleton: true, eager: true, requiredVersion: false },
+    '@react-navigation/native-stack': { singleton: true, eager: true, requiredVersion: false },
+  },
+};
+
+module.exports = withModuleFederation(config); 

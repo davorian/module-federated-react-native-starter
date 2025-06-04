@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "start:webstack": "nx run-many --target=serve --projects=${WEB_APPS} --parallel=true",
+    "start:mobstack": "nx run-many --target=serve --projects=${MOB_APPS} --parallel=true",
+    "start:all": "nx run-many --target=serve --projects=${ALL_APPS} --parallel=true"
+  }
+} 

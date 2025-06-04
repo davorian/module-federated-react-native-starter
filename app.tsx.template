@@ -1,0 +1,12 @@
+import React from 'react';
+${REMOTE_IMPORTS}
+
+const App = () => {
+  return (
+    <>
+      ${REMOTE_SCREENS}
+    </>
+  );
+};
+
+export default App; 
