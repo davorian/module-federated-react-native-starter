@@ -13,14 +13,14 @@
   },
   "dependencies": {
     "@module-federation/enhanced": "0.8.6",
-    "react": "18.3.1",
-    "react-native": "0.77.0"
+    "react": "19.0.0",
+    "react-native": "0.79.2"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
-    "@callstack/repack": "5.0.0-rc.10",
+    "@callstack/repack": "5.1.1",
     "@react-native-community/cli": "15.0.1",
     "@react-native-community/cli-platform-android": "15.0.1",
     "@react-native-community/cli-platform-ios": "15.0.1",

@@ -1,105 +1,54 @@
-import path from 'node:path';
 import * as Repack from '@callstack/repack';
+// import { getSharedDependencies } from './getSharedDependencies.js';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 import rspack from '@rspack/core';
-import {withZephyr} from 'zephyr-repack-plugin'
 
-const dirname = Repack.getDirname(import.meta.url);
+// import pkg from './package.json' with {type: "json"}
+const EXCEPT = ['@module-federation/enhanced']
 
-/** @type {(env: import('@callstack/repack').EnvOptions) => import('@rspack/core').Configuration} */
+/*const getSharedDependencies = ({eager = true}) => {
+  const shared = Object.entries(pkg.dependencies)
+    .filter(([dep]) => !EXCEPT.includes(dep))
+    .map(([dep, version]) => {
+      return [dep, {singleton: true, eager, requiredVersion: version}];
+    });
+  return Object.fromEntries(shared);
+};*/
+
+const dirname = Repack.getDirname(import.meta.url)
+const zephyrDisabled = true
+
 export default (env) => {
+  //const sharedDepsMobile = JSON.parse(
+  //  readFileSync(join(dirname, '../../shared-deps-mob.json'), 'utf8')
+  //);
+
   const {
-    mode = 'development',
-    context = dirname,
-    platform = process.env.PLATFORM,
-    minimize = mode === 'production',
-    devServer = undefined,
-    bundleFilename = undefined,
-    sourceMapFilename = undefined,
-    assetsPath = undefined,
-  } = env;
+    platform = process.env.PLATFORM
+  } = env
 
-  if (!platform) {
-    throw new Error('Missing platform');
-  }
-
-  process.env.BABEL_ENV = mode;
+  const defaultRemotes = {
+    "mob_remote1": `mob_remote1@http://localhost:8082/${platform}/mf-manifest.json`,
+    "mob_remote2": `mob_remote2@http://localhost:8083/${platform}/mf-manifest.json`,
+    "mob_remote3": `mob_remote3@http://localhost:8084/${platform}/mf-manifest.json`,
+    "auth": `auth@http://localhost:8083/${platform}/mf-manifest.json`
+  };
 
   return {
-    mode,
-    devtool: false,
-    context,
-    entry: {},
+    context:dirname,
+    entry : './index.js',
     resolve: {
-      ...Repack.getResolveOptions(platform),
-    },
-    output: {
-      clean: true,
-      hashFunction: 'xxhash64',
-      path: path.join(dirname, 'build', 'mfe-food', platform),
-      filename: 'index.bundle',
-      chunkFilename: '[name].chunk.bundle',
-      publicPath: Repack.getPublicPath({ platform, devServer }),
-      uniqueName: 'mfe-food',
-    },
-    optimization: {
-      minimize,
-      chunkIds: 'named',
+      ...Repack.getResolveOptions(),
     },
     module: {
       rules: [
-        Repack.REACT_NATIVE_LOADING_RULES,
-        Repack.NODE_MODULES_LOADING_RULES,
-        Repack.FLOW_TYPED_MODULES_LOADING_RULES,
-        {
-          test: /\.[jt]sx?$/,
-          type: 'javascript/auto',
-          exclude: [/node_modules/],
-          use: {
-            loader: 'builtin:swc-loader',
-            options: {
-              env: {
-                targets: { 'react-native': '0.77' },
-              },
-              jsc: {
-                assumptions: {
-                  setPublicClassFields: true,
-                  privateFieldsAsProperties: true,
-                },
-                externalHelpers: true,
-                transform: {
-                  react: {
-                    runtime: 'automatic',
-                  },
-                },
-              },
-            },
-          },
-        },
-        {
-          test: Repack.getAssetExtensionsRegExp(Repack.ASSET_EXTENSIONS),
-          use: {
-            loader: '@callstack/repack/assets-loader',
-            options: {
-              platform,
-              devServerEnabled: Boolean(devServer),
-              inline: true,
-            },
-          },
-        },
+        ...Repack.getJsTransformRules(),
+        ...Repack.getAssetTransformRules(),
       ],
     },
     plugins: [
-      new Repack.RepackPlugin({
-        context,
-        mode,
-        platform,
-        devServer,
-        output: {
-          bundleFilename,
-          sourceMapFilename,
-          assetsPath,
-        },
-      }),
+      new Repack.RepackPlugin(),
       new Repack.plugins.ModuleFederationPluginV2({
         name: 'mfeFood',
         filename: 'mfeFood.container.js.bundle',
@@ -107,17 +56,46 @@ export default (env) => {
           '.': './App',
         },
         dts: false,
-        getPublicPath: `return "http://localhost:8082/${platform}/"`,
         shared: {
           react: {
             singleton: true,
-            eager: false,
-            requiredVersion: '18.3.1',
+            eager: true,
+            requiredVersion: '19.0.0',
           },
           'react-native': {
             singleton: true,
-            eager: false,
-            requiredVersion: '0.77.0',
+            eager: true,
+            requiredVersion: '0.79.2',
+          },
+          '@react-navigation/native': {
+            singleton: true,
+            eager: true,
+            requiredVersion: '^7.0.14',
+          },
+          '@react-navigation/native-stack': {
+            singleton: true,
+            eager: true,
+            requiredVersion: '^7.2.0',
+          },
+          'react-native-safe-area-context': {
+            singleton: true,
+            eager: true,
+            requiredVersion: '^5.2.0',
+          },
+          'react-native-screens': {
+            singleton: true,
+            eager: true,
+            requiredVersion: '^4.7.0-beta.4',
+          },
+          '@react-native-masked-view/masked-view': {
+            singleton: true,
+            eager: true,
+            requiredVersion: '^0.3.2',
+          },
+          '@react-navigation/elements': {
+            singleton: true,
+            eager: true,
+            requiredVersion: '^2.2.5',
           },
         },
       }),
@@ -127,5 +105,4 @@ export default (env) => {
       }),
     ],
   };
-  return withZephyr()(config);
 };
